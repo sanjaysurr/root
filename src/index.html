@@ -34,21 +34,29 @@
    <section class="hero" id="home">
   <div class="hero-overlay"></div>
 
-  <div class="hero-content-wrapper">
-    <!-- Left Hero Content -->
+  <div class="hero-inner">
+    <!-- Left: Text Content -->
     <div class="hero-content">
       <h1 class="hero-title">Fine Dine Restaurant in Koramangala</h1>
       <p class="hero-subtitle">Multi-Cuisine Magic in the Heart of Koramangala</p>
     </div>
 
-    <!-- Right Contact Form -->
-    <form class="banner-form" id="hero-contact-form">
-      <h3 class="form-title">Get in Touch</h3>
-      <input type="text" name="user_name" placeholder="Full Name" required>
-      <input type="email" name="user_email" placeholder="Email Address" required>
-      <input type="tel" name="phone" placeholder="Phone Number">
-      <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <!-- Right: Form -->
+    <form class="banner-form">
+      <h2 class="form-title">Reserve a Table</h2>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <select>
+        <option value="">Select Guests</option>
+        <option value="1">1 Person</option>
+        <option value="2">2 People</option>
+        <option value="3">3 People</option>
+        <option value="4+">4+ People</option>
+      </select>
+      <input type="date" required />
+      <textarea placeholder="Special Requests"></textarea>
+      <button type="submit">Book Now</button>
     </form>
   </div>
 

@@ -138,14 +138,40 @@ h1, h2, h3, h4 {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(44, 24, 16, 0.4), rgba(44, 24, 16, 0.4)),
-                url('public/DSC08466.jpg') center/cover;
+                url('public/DSC08466.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     color: white;
     position: relative;
+    padding: 0 5%;
 }
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 20px;
+    text-align: left;
+    margin-top: 164px;
+}
+
+.banner-form {
+    flex: 1;
+    max-width: 500px;
+}
+
 
 .hero-overlay {
     position: absolute;
@@ -204,69 +230,130 @@ h1, h2, h3, h4 {
     font-size: 1.5rem;
     animation: bounce 2s infinite;
 }
-.hero-wrapper {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 2rem 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+
+.banner-form {
+    flex: 0 0 400px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.hero-content {
-    flex: 1 1 45%;
-    text-align: left;
+.banner-form .form-title {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
     color: white;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
-.hero-form {
-    flex: 1 1 45%;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.15);
-}
-
-.hero-form h3.form-title {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: #2c1810;
-}
-
-.hero-form input,
-.hero-form textarea {
+.banner-form input,
+.banner-form select,
+.banner-form textarea {
     width: 100%;
-    margin-bottom: 1rem;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-family: inherit;
-}
-
-.hero-form button {
-    background: linear-gradient(135deg, #d4af37, #b8860b);
-    color: white;
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 12px 15px;
+    margin-bottom: 15px;
     border: none;
-    border-radius: 50px;
-    cursor: pointer;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    outline: none;
     transition: all 0.3s ease;
 }
 
-.hero-form button:hover {
-    background: linear-gradient(135deg, #b8860b, #d4af37);
-    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+.banner-form input:focus,
+.banner-form select:focus,
+.banner-form textarea:focus {
+    background: white;
+    box-shadow: 0 0 0 2px var(--leaf-green);
+}
+
+.banner-form button {
+    width: 100%;
+    background: var(--leaf-green);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.banner-form button:hover {
+    background: var(--forest-green);
     transform: translateY(-2px);
 }
 
+@media (max-width: 600px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 20px 40px; /* Ensure enough top padding */
+    gap: 20px;
+  }
 
+  .hero-content {
+    text-align: center;
+    padding-right: 0;
+    max-width: 100%;
+    margin-top: 0; /* Remove large top margin */
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .banner-form {
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto 60px; /* Add bottom margin only */
+    z-index: 2;
+  }
+
+  .banner-form input,
+  .banner-form select,
+  .banner-form textarea,
+  .banner-form button {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .form-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    height: 135vh; /* Increase height for mobile */
+    background-size: cover; /* Ensures full coverage */
+    background-position: center center; /* Keeps image centered */
+  }
+
+  .banner-form {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero-content {
+    padding: 0 10px;
+    text-align: center;
+  }
+}
 
 /* Animations */
 @keyframes fadeInUp {
@@ -706,13 +793,7 @@ h1, h2, h3, h4 {
         margin: 1rem 0;
     }
     
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
+ 
     
     .section-title {
         font-size: 2rem;
@@ -744,13 +825,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 480px) {
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1rem;
-    }
+   
     
     .section-title {
         font-size: 1.8rem;
