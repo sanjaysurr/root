@@ -1,0 +1,17 @@
+{
+  "name": "roots-restaurant-website",
+  "version": "1.0.0",
+  "description": "Roots Fine Dine Restaurant Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["restaurant", "fine-dining", "koramangala", "bangalore"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
