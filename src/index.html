@@ -31,17 +31,31 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">Fine Dine Restaurant in Koramangala</h1>
-            <p class="hero-subtitle">Multi-Cuisine Magic in the Heart of Koramangala</p>
-           
-        </div>
-        <div class="scroll-indicator">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+   <section class="hero" id="home">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content-wrapper">
+    <!-- Left Hero Content -->
+    <div class="hero-content">
+      <h1 class="hero-title">Fine Dine Restaurant in Koramangala</h1>
+      <p class="hero-subtitle">Multi-Cuisine Magic in the Heart of Koramangala</p>
+    </div>
+
+    <!-- Right Contact Form -->
+    <form class="banner-form" id="hero-contact-form">
+      <h3 class="form-title">Get in Touch</h3>
+      <input type="text" name="user_name" placeholder="Full Name" required>
+      <input type="email" name="user_email" placeholder="Email Address" required>
+      <input type="tel" name="phone" placeholder="Phone Number">
+      <textarea name="message" rows="3" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <div class="scroll-indicator">
+    <i class="fas fa-chevron-down"></i>
+  </div>
+</section>
 
     <!-- Home Content -->
     <section class="home-content">
