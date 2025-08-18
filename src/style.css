@@ -873,35 +873,53 @@ h1, h2, h3, h4 {
     transform: translateY(-2px) scale(1.05);
 }
 
-.sticky-contact {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1000;
-}
+ .whatsapp-btn, .phone-btn {
+      position: fixed;
+      width: 50px;
+      height: 50px;
+      right: 15px; /* Same right position for both */
+      background-color: #25D366; /* WhatsApp green */
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-.sticky-contact a {
-  width: 50px;
-  height: 50px;
-  background-color: #25D366; /* WhatsApp green */
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  font-size: 24px;
-  transition: transform 0.3s;
-}
+    .whatsapp-btn {
+      bottom: 100px; /* Higher position */
+    }
 
-.sticky-contact a.phone-btn {
-  background-color: #007bff; /* Blue for phone */
-}
+    .phone-btn {
+      bottom: 40px; /* Lower position, below WhatsApp */
+      background-color: #007BFF; /* Phone button blue */
+    }
 
-.sticky-contact a:hover {
-  transform: scale(1.1);
-}
+    .whatsapp-btn:hover, .phone-btn:hover {
+      transform: scale(1.1); /* Slight zoom on hover */
+      opacity: 0.9; /* Slight fade on hover */
+    }
+
+    .whatsapp-btn i, .phone-btn i {
+      margin: 0;
+    }
+
+    /* Fallback text if icons don't load */
+    .whatsapp-btn::after, .phone-btn::after {
+      display: none;
+      content: attr(data-fallback);
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Show fallback text if Font Awesome fails */
+    .whatsapp-btn.no-icon::after, .phone-btn.no-icon::after {
+      display: block;
+    }
+ 
