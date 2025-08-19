@@ -18,9 +18,11 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#why-choose" class="nav-link">Why Choose Us</a></li>
                 <li><a href="#spaces" class="nav-link">Our Spaces</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -36,25 +38,19 @@
 
   <div class="hero-inner">
     <!-- Left: Text Content -->
-    <div class="hero-content">
-      <h1 class="hero-title">Fine Dine Restaurant in Koramangala</h1>
+    <div class="hero-content"><h1 class="hero-title" style="color: bisque;">Fine Dine Restaurant in Koramangala</h1>
+
       <p class="hero-subtitle">Multi-Cuisine Magic in the Heart of Koramangala</p>
     </div>
 
     <!-- Right: Form -->
    <form class="banner-form" id="hero-contact-form">
-  <h2 class="form-title">Reserve a Table</h2>
+  <h2 class="form-title"> Reserve a Table</h2>
   <input type="text" name="name" placeholder="Your Name" required />
   <input type="email" name="email" placeholder="Email Address" required />
   <input type="tel" name="phone" placeholder="Phone Number" required />
   
-  <select name="guests" required>
-    <option value="">Select Guests</option>
-    <option value="1">1 Person</option>
-    <option value="2">2 People</option>
-    <option value="3">3 People</option>
-    <option value="4+">4+ People</option>
-  </select>
+ <input type="text" name="guests" placeholder="No Of Guests" required />
   
   <input type="date" name="date" required />
   <textarea name="requests" placeholder="Special Requests"></textarea>
@@ -133,7 +129,7 @@
 
 
      <!-- Image Slider Section -->
-   <section class="gallery-section">
+   <section class="gallery-section" id="gallery">
     <div class="gallery-heading">Gallery</div>
     <div class="gallery-grid">
       <img src="public/DSC08465.jpg" alt="Gallery Image">
@@ -152,7 +148,7 @@
             <h2 class="section-title">Why Choose Roots</h2>
             <div class="features-grid">
                 <div class="feature-card">
-                    <div class="feature-icon">
+                    <div class="feature-icon"> 
                         <i class="fas fa-utensils"></i>
                     </div>
                     <h3>Ambiance that Speaks Class</h3>
@@ -277,43 +273,65 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="public/roots-logo.png" alt="Roots Fine Dine Logo" style="height:100px;">
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#spaces">Our Spaces</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Roots Fine Dine. All rights reserved.</p>
-            </div>
+   <!-- (Optional) Font Awesome CDN for icons -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="public/roots-logo.png" alt="Roots Fine Dine Logo" class="footer-logo-img" />
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#spaces">Our Spaces</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com/roots.restaurant_/" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.facebook.com/rootsrestaurantbangalore" target="_blank" rel="noopener" aria-label="Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
         </div>
-    </footer>
+      </div>
+
+      <!-- Contact Email -->
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>
+          <a href="mailto:info@rootsfinedine.com">info@rootsfinedine.com</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>&copy; 2024 Roots Fine Dine. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
 
     <script src="script.js"></script>
 
        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
      <script>
   (function() {
-    emailjs.init("JEkbnfOA5RJHuy1Lc"); // Replace with your EmailJS public key
+    emailjs.init("ppJAXQ8vSdd_e4HDy"); // Replace with your EmailJS public key
   })();
 </script>
 <script>
@@ -324,7 +342,7 @@
 form.addEventListener('submit', function(event) {
   event.preventDefault();
   button.textContent = "Sending...";
-  emailjs.sendForm('service_zpl25yd', 'template_wl2oulg', this)
+  emailjs.sendForm('service_0xvei6r', 'template_tyagvpk', this)
     .then(() => {
       button.textContent = "Send Message";
       alert('Message Sent Successfully!');
