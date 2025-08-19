@@ -953,4 +953,20 @@ h1, h2, h3, h4 {
     .whatsapp-btn.no-icon::after, .phone-btn.no-icon::after {
       display: block;
     }
+
+
+    .phone-list {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  gap: 15px; /* spacing between numbers */
+}
+    .phone-list a {
+  text-decoration: none;
+  color: whitesmoke; /* customize color */
+  font-weight: 500;
+}
+
+.phone-list a:hover {
+  text-decoration: underline;
+}
  
