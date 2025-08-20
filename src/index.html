@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roots Fine Dine - Multi-Cuisine Restaurant in Koramangala</title>
+    <title>Roots Restaurant</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="public/roots-logo.png" type="image/x-icon">
 </head>
 <body>
     <!-- Navigation -->
@@ -33,35 +34,41 @@
     </nav>
 
     <!-- Hero Section -->
-   <section class="hero" id="home">
+  <section class="hero" id="home">
+  <!-- Background Video -->
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="public/ROOTS (1).mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay -->
   <div class="hero-overlay"></div>
 
+  <!-- Hero Content -->
   <div class="hero-inner">
     <!-- Left: Text Content -->
-    <div class="hero-content"><h1 class="hero-title" style="color: bisque;">Fine Dine Restaurant in Koramangala</h1>
-
+    <div class="hero-content">
+      <h1 class="hero-title" style="color: blanchedalmond;">Fine Dine Restaurant in Koramangala</h1>
       <p class="hero-subtitle">Multi-Cuisine Magic in the Heart of Koramangala</p>
     </div>
 
     <!-- Right: Form -->
-   <form class="banner-form" id="hero-contact-form">
-  <h2 class="form-title"> Reserve a Table</h2>
-  <input type="text" name="name" placeholder="Your Name" required />
-  <input type="email" name="email" placeholder="Email Address" required />
-  <input type="tel" name="phone" placeholder="Phone Number" required />
-  
- <input type="text" name="guests" placeholder="No Of Guests" required />
-  
-  <input type="date" name="date" required />
-  <textarea name="requests" placeholder="Special Requests"></textarea>
-  <button type="submit">Book Now</button>
-</form>
+    <form class="banner-form" id="hero-contact-form">
+      <h2 class="form-title">Reserve a Table</h2>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="text" name="guests" placeholder="No Of Guests" required />
+      <input type="date" name="date" required />
+      <textarea name="requests" placeholder="Special Requests"></textarea>
+      <button type="submit">Book Now</button>
+    </form>
+  </div>
 
   <div class="scroll-indicator">
     <i class="fas fa-chevron-down"></i>
   </div>
 </section>
-
     <!-- Home Content -->
     <section class="home-content">
         <div class="container">
@@ -128,7 +135,7 @@
     </section>
 
 
-     <!-- Image Slider Section -->
+    <!-- Gallery Section -->
    <section class="gallery-section" id="gallery">
     <div class="gallery-heading">Gallery</div>
     <div class="gallery-grid">
@@ -205,7 +212,9 @@
                     </div>
                     <div class="space-content">
                         <h3>Ground Floor – Elegant Fine Dine</h3>
-                        <p>Step into serenity at the Ground Floor of Roots, our signature fine dine area, designed for intimate meals and special occasions. With cozy lighting, elegant décor, and attentive service, this space reflects timeless sophistication. It's ideal for romantic dinners, family outings, or important business lunches.</p>
+                        <p>Step into serenity at the Ground Floor of Roots, our signature fine dine area, designed for intimate meals and special occasions.
+                             With cozy lighting, elegant décor, and attentive service, this space reflects timeless sophistication.
+                              It's ideal for romantic dinners, family outings, or important business lunches.</p>
                     </div>
                 </div>
                 <div class="space-card">
@@ -214,7 +223,8 @@
                     </div>
                     <div class="space-content">
                         <h3>First Floor – The Mezzanine Lounge</h3>
-                        <p>Our first-floor mezzanine is where classy meets casual. This in-between space bridges the elegance of fine dining and the openness of the rooftop. With a modern setup, plush seating, and soft lighting, it's perfect for small groups, brunch meetings, or those who love dining with a view.</p>
+                        <p>Our first-floor mezzanine is where classy meets casual. This in-between space bridges the elegance of fine dining and the openness of the rooftop. 
+                            With a modern setup, plush seating, and soft lighting, it's perfect for small groups, brunch meetings, or those who love dining with a view.</p>
                     </div>
                 </div>
                 <div class="space-card">
@@ -223,7 +233,9 @@
                     </div>
                     <div class="space-content">
                         <h3>Rooftop – Open-Air Dining Under the Stars</h3>
-                        <p>There's nothing quite like dining under the stars, and our rooftop restaurant is proof. With a panoramic view of Koramangala's skyline, cool evening breezes, and ambient lighting, the rooftop at Roots is the ultimate spot for weekend hangouts, celebrations, or date nights.</p>
+                        <p>There's nothing quite like dining under the stars, and our rooftop restaurant is proof. 
+                            With a panoramic view of Koramangala's skyline, cool evening breezes, and ambient lighting, 
+                            the rooftop at Roots is the ultimate spot for weekend hangouts, celebrations, or date nights.</p>
                     </div>
                 </div>
             </div>
@@ -338,7 +350,7 @@
        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
      <script>
   (function() {
-    emailjs.init("ppJAXQ8vSdd_e4HDy"); // Replace with your EmailJS public key
+    emailjs.init("ppJAXQ8vSdd_e4HDy"); 
   })();
 </script>
 <script>
