@@ -1014,3 +1014,125 @@ h1, h2, h3, h4 {
   text-decoration: underline;
 }
  
+/* Blog Section */
+.blog {
+    padding: 40px 0;
+    background: #FFF8E7; /* Cream background for warmth */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: #2C2C2C;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.blog-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.blog-card {
+    flex: 0 1 calc(50% - 20px); /* 2 columns, accounting for gap */
+    max-width: 500px;
+    border: 1px solid #8B5E3C; /* Deep gold border */
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: scale(1.03);
+    background: #F9E4B7; /* Light gold on hover */
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 20px;
+}
+
+.blog-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #2C2C2C;
+    margin: 0 0 10px;
+}
+
+.blog-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 0 15px;
+}
+
+.blog-link {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #8B5E3C;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.blog-link:hover {
+    color: #A67C00; /* Brighter gold on hover */
+}
+
+.intro-ccta {
+    display: block;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #fff;
+    background: #8B5E3C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 30px auto;
+    width: fit-content;
+}
+
+.intro-ccta:hover {
+    background: #A67C00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-card {
+        flex: 0 1 100%; /* Single column on smaller screens */
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .blog-image {
+        height: 160px;
+    }
+
+    .blog-content h3 {
+        font-size: 18px;
+    }
+
+    .blog-content p {
+        font-size: 13px;
+    }
+}
